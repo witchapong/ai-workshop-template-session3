@@ -22,6 +22,16 @@ agent inventing extra work._
 
 ## Size check
 
+Your agent will not tell you an idea is too big. It will draft requirements for
+whatever you write above, then tasks, then spend the whole lab half-building it,
+and you find out only when the time runs out. This is where you decide instead.
+
+Every bullet you wrote under "done" becomes a row at Gate 2, a test at task 1,
+and code at task 2 — so the number of bullets is the size of the project. Lab 3
+sat at exactly this limit: three bullets, plus the two about a busy LLM and an
+unreadable answer. That became twelve rows and eight tests, and took the whole
+forty minutes with the agent doing the typing.
+
 Tick every box before you sign. If one will not tick, cut the idea down.
 
 - [ ] One page
