@@ -6,6 +6,13 @@ thing.
 
 ## Setup
 
+**`git` "is not recognized"**
+Git is not installed on this PC. Install it, then close the terminal and open a
+new one: `winget install --id Git.Git -e`. If `winget` is missing too, download
+the installer from `https://git-scm.com/download/win` and accept every default.
+You need Git for more than the first clone: "Catching up" in `labs/LAB3.md` uses
+it, and so does pushing your work before you leave.
+
 **`python` or `pytest` "is not recognized"**
 The venv is never activated, on purpose, so bare `python` and `pytest` do not
 exist here. Always name the project's interpreter:

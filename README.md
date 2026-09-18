@@ -18,6 +18,15 @@ time, even if you did it last week.
    ```
    Then **File → Open Folder** on `lab3-triage`, and click **Trust Folder &
    Continue**.
+
+   Does it say `git` **is not recognized**? Git is missing from this PC. Install
+   it, then close the terminal and open a new one before trying the clone again:
+   ```
+   winget install --id Git.Git -e
+   ```
+   If that fails too, download the installer from `https://git-scm.com/download/win`
+   and accept every default. Git is needed all morning, not just here: it is how
+   you catch up if you fall behind, and how you push your work before you leave.
 3. **Create the venv**, a private copy of Python for this project:
    ```
    py -3.14 -m venv .venv
