@@ -21,20 +21,20 @@ itself, click **Cancel** and type the next prompt yourself.
 2. Open `aidlc/intent.md` and write an answer under each of its four questions.
 3. Do the size check. Every box must tick. If one will not, cut the idea down
    (see "Cutting an idea down").
-4. Write the last box's sentence: what does your code decide from the model's
-   answer? A page that only shows the model's answer is not enough.
+4. Write the last box's sentence: what does your code decide from the LLM's
+   answer? A page that only shows the LLM's answer is not enough.
 5. Sign `aidlc/intent.md`.
 
 ### Cutting an idea down
 
 | Too big | Cut down to |
 |---|---|
-| A second-hand marketplace for the dorm | Paste one listing. The model pulls out the item, its condition and the price; the code says **fair price**, **overpriced** or **check the photos** |
-| A study-group finder | Paste one "anyone studying…" post. The model pulls out subject, time and place; the code says **starts within an hour** or **later today** |
+| A second-hand marketplace for the dorm | Paste one listing. The LLM pulls out the item, its condition and the price; the code says **fair price**, **overpriced** or **check the photos** |
+| A study-group finder | Paste one "anyone studying…" post. The LLM pulls out subject, time and place; the code says **starts within an hour** or **later today** |
 
 ### Ideas
 
-| Text that comes in | What the model pulls out | What your code decides |
+| Text that comes in | What the LLM pulls out | What your code decides |
 |---|---|---|
 | A dorm repair request | type, urgency, room | an urgent electrical fault → "call the dorm office now" |
 | A club event sign-up | event, headcount, dietary needs | over capacity → waitlist |
@@ -57,7 +57,7 @@ itself, click **Cancel** and type the next prompt yourself.
 2. You get `aidlc/requirements.md`.
 3. Check it: every "done" bullet has a row; `pytest` rows test what your code
    decides; `EYES` rows say exactly what you will see; there are rows for an
-   answer that is not JSON, a missing field, and a busy model.
+   answer that is not JSON, a missing field, and a busy LLM.
 4. Sign it.
 
 ## Gate 3 — Design and tasks
@@ -70,7 +70,7 @@ itself, click **Cancel** and type the next prompt yourself.
    ```
 
 2. You get `aidlc/design.md` and `aidlc/tasks.md`.
-3. Check them: the model call is a separate function, passed in; three tasks,
+3. Check them: the LLM call is a separate function, passed in; three tasks,
    one file each, in the order tests, code, page.
 4. Sign both files.
 
@@ -119,23 +119,26 @@ In this order:
 2. **`TROUBLESHOOTING.md`**, for setup and Cline problems.
 3. **At 11:40, stop building.** Whatever works is your demo.
 
-## The gallery walk (11:50)
+## Random demos (11:50)
 
 Nothing is graded and nothing is handed in.
 
-| Clock | Who |
+The instructor picks four or five students at random to demo, each for about
+two minutes, right up to the 12:00 close. Anyone may be picked, so have your
+app running.
+
+| Clock | What |
 |---|---|
-| 11:50 | Pair up with your neighbour. The left-hand seat shows its app |
-| 11:55 | Swap: the right-hand seat shows |
+| 11:50 | First demo |
 | 12:00 | Close |
 
-When it is your turn to show, give three things in under three minutes:
+If you are picked, give three things in about two minutes:
 
 1. Your intent, in one sentence.
 2. Your app, on one real input.
 3. The one thing your code decides.
 
-When you watch, tell your neighbour one thing that worked and one idea to try
-next.
+When you are not demoing, watch for one idea you could steal for your own
+project.
 
 Push your work afterwards if you want it for your portfolio.

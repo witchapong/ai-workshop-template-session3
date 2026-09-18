@@ -2,7 +2,7 @@
 
 **What you build:** a page where a shop owner pastes one customer message and
 sees what kind it is, how urgent it is, what it says in one line, and a draft
-reply. The model reads the message. Your code decides what happens next.
+reply. The LLM reads the message. Your code decides what happens next.
 
 **Time:** Gate 1, 10 minutes on your own. Gates 2 to 4, 40 minutes, following
 your instructor.
@@ -29,7 +29,7 @@ The only file you write yourself.
 1. Open `lab3/scenario.md` and read Fah's story.
 2. Open `aidlc/intent.md` and write an answer under each of its four questions.
 3. Tick all six size-check boxes. For the last one, write the sentence: what
-   does your code decide from the model's answer?
+   does your code decide from the LLM's answer?
 4. **Only now**, scroll to "The reference intent" at the end of this file. Add
    anything you missed.
 5. Sign `aidlc/intent.md`.
@@ -46,10 +46,10 @@ The only file you write yourself.
 2. You get `aidlc/requirements.md`, a table of numbered rows.
 3. Check it:
    - every bullet under "What does done look like?" in your intent has a row
-   - `pytest` rows test what the code decides, never what the model thinks
+   - `pytest` rows test what the code decides, never what the LLM thinks
    - `EYES` rows say what to open, what to do, and exactly what you will see
    - there are rows for an answer that is not JSON, an answer missing a field,
-     and a busy model
+     and a busy LLM
 
    Anything wrong or missing? Tell Cline what to change, in the same task.
 4. Sign `aidlc/requirements.md`.
@@ -65,7 +65,7 @@ The only file you write yourself.
 
 2. You get `aidlc/design.md` and `aidlc/tasks.md`.
 3. Check them:
-   - `design.md` has a separate function that calls the model, **passed in** to
+   - `design.md` has a separate function that calls the LLM, **passed in** to
      the function that uses it, so a test can hand in a fake
    - `tasks.md` has exactly three tasks, one file each, in this order:
      `tests/test_triage.py`, `core/triage.py`, `pages/1_Triage.py`
@@ -82,7 +82,10 @@ The only file you write yourself.
    Do task 1.
    ```
 
-2. You get `tests/test_triage.py`.
+2. You get `tests/test_triage.py`. Open it and read it before running anything:
+   each test is one `pytest` row from `aidlc/requirements.md`, carrying the same
+   name. Nothing in it calls the real LLM — each test hands your code a fake one
+   that returns a fixed answer.
 3. Run the tests:
 
    ```
@@ -104,6 +107,15 @@ The only file you write yourself.
 
 2. You get `core/triage.py`.
 3. Run the tests again. Every test must now **pass**.
+
+**Optional, one minute — prove the tests are real.** Open `core/triage.py` and
+find the line that decides the banner. It looks like
+`if result["category"] == "complaint" and result["urgency"] == "high":`. Change
+`"high"` to `"low"` and save: the rule is now wrong on purpose. Run the tests
+again. One test fails, and its name is the row it came from — you never wrote
+that test, and it still caught you. Change `"low"` back to `"high"`, save, and
+run once more: everything passes. Your line may read a little differently;
+whatever it looks like, make the rule wrong, then put it back.
 
 ### Task 3 — the page
 
@@ -193,15 +205,15 @@ arrived, not the order that matters. Urgent complaints get buried.
   draft reply in the customer's language
 - A high-urgency complaint shows a red "Needs you personally" banner
 - Anything that is not a real customer message shows "Probably safe to ignore" and no draft reply
-- If the model is busy, the page tells me and lets me try again — never a
+- If the LLM is busy, the page tells me and lets me try again — never a
   blank page or an error screen
-- If the model's answer can't be read, the page says so — never half a result
+- If the LLM's answer can't be read, the page says so — never half a result
 
 **What is deliberately NOT included?**
 Saving messages, sending replies, logins, connecting to LINE or Instagram, and
 more than one message at a time.
 
-**What my code decides from the model's answer:**
+**What my code decides from the LLM's answer:**
 A high-urgency complaint gets the "Needs you personally" banner, and anything
 classed "other" is marked safe to ignore.
 ```

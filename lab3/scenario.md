@@ -10,7 +10,7 @@ a reply she can edit and send.
 ## Six messages from last night
 
 Use these to check your app at the end of Gate 4. The last column says what
-your page must do. It does not say what the model will call each message: that
+your page must do. It does not say what the LLM will call each message: that
 can change from run to run, and your page must not depend on it.
 
 | # | Message | Your page must |

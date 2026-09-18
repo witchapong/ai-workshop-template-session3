@@ -42,7 +42,7 @@ time, even if you did it last week.
    squares on the left), search `saoudrizwan.claude-dev`, and install it.
    Either way, check the dialog names `cline.bot`, then click **Trust
    Publisher & Install**.
-8. **Point Cline at the model.** Click the robot icon on the left.
+8. **Point Cline at the LLM.** Click the robot icon on the left.
    1. Choose **Bring my own API key**. It is the fourth option; scroll if you
       cannot see it.
    2. The provider box starts on **OpenRouter**. Click it, type `compatible`,
