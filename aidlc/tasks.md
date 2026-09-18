@@ -8,9 +8,9 @@ exists.
 
 | # | Task | The one file it touches | Done when |
 |---|---|---|---|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
+| 1 | Write the tests, using a fake LLM | `tests/test_triage.py` | `pytest` runs and all 8 tests fail |
+| 2 | Write the LLM call and the two decisions | `core/triage.py` | requirements 1–8: all 8 tests pass |
+| 3 | Write the page | `pages/1_Triage.py` | requirements 9–12 |
 
-**Approved by:**
-**Date:**
+**Approved by:** Reference solution
+**Date:** 2026-09-14

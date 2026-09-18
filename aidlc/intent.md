@@ -6,40 +6,39 @@ something nobody builds, and nobody checks. Write your answer under each
 question.
 
 **Who is this for?**
-_One real person and their situation, in one sentence._
+Fah, who runs a small clothing shop on Instagram and LINE from her dorm.
 
 **What problem does it solve?**
-_What is slow, annoying or easy to get wrong for them today._
+She gets forty to sixty messages a night and answers them in the order they
+arrived, not the order that matters. Urgent complaints get buried.
 
 **What does "done" look like?**
-_A bulleted list, one line per thing that must be true before you would call
-it finished. Include what must be true on the screen, and what the page does
-when the LLM is busy or its answer cannot be read._
+- I paste one message and press Triage, and see its category (order,
+  complaint, question or other), how urgent it is, a one-line summary, and a
+  draft reply in the customer's language
+- A high-urgency complaint shows a red "Needs you personally" banner
+- Anything that is not a real customer message shows "Probably safe to
+  ignore" and no draft reply
+- If the LLM is busy, the page tells me and lets me try again — never a
+  blank page or an error screen
+- If the LLM's answer can't be read, the page says so — never half a result
 
 **What is deliberately NOT included?**
-_At least two things you are choosing not to build. This is what stops the
-agent inventing extra work._
+Saving messages, sending replies, logins, connecting to LINE or Instagram, and
+more than one message at a time.
 
 ## Size check
 
-Your agent will not tell you an idea is too big. It will draft requirements for
-whatever you write above, then tasks, then spend the whole lab half-building it,
-and you find out only when the time runs out. This is where you decide instead.
-
-Every bullet you wrote under "done" becomes a row at Gate 2, a test at task 1,
-and code at task 2 — so the number of bullets is the size of the project. Lab 3
-sat at exactly this limit: three bullets, plus the two about a busy LLM and an
-unreadable answer. That became twelve rows and eight tests, and took the whole
-forty minutes with the agent doing the typing.
-
 Tick every box before you sign. If one will not tick, cut the idea down.
 
-- [ ] One page
-- [ ] At most three bullets under "What does done look like?", plus the two about a busy LLM and an unreadable answer
-- [ ] One LLM call per button press
-- [ ] No logins, no saved history
-- [ ] No outside service except the LLM
-- [ ] I can say in one sentence what my code decides from the LLM's answer:
+- [x] One page
+- [x] At most three bullets under "What does done look like?", plus the two about a busy LLM and an unreadable answer
+- [x] One LLM call per button press
+- [x] No logins, no saved history
+- [x] No outside service except the LLM
+- [x] I can say in one sentence what my code decides from the LLM's answer:
+  a high-urgency complaint gets the "Needs you personally" banner, and
+  anything classed "other" is marked safe to ignore.
 
-**Approved by:**
-**Date:**
+**Approved by:** Reference solution
+**Date:** 2026-09-14
